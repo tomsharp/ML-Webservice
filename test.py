@@ -5,6 +5,5 @@ params = {'words': 'e04a09c87692 d6b72e591b91 5d066f0246f1 ed41171e2e6d 59260a27
 response = requests.get(url, params)
 
 
-assert response.json() == params['words']
 print('\n', response)
 print('',response.json())
