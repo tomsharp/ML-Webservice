@@ -1,1 +1,1 @@
-web: gunicorn app:app --limit-request-line INT
+web: gunicorn app:app --limit-request-line 0
