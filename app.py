@@ -38,11 +38,11 @@ class Predictor(Resource):
         return {'prediction': prediction, 'confidence':confidence}
         
 
-api.add_resource(Predictor, '/')
+api.add_resource(Predictor, '/predict')
 
 @app.route('/')
 def index():
-    return "<h1>Welcome to our server !!</h1>"
+    return "<h1>Welcome to my document classifier!</h1>"
 
 if __name__ == '__main__':
-    app.run(debug=False, port=5000)
+    app.run(debug=True)
