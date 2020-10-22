@@ -42,11 +42,10 @@ api.add_resource(Predictor, '/predict')
 
 @app.route('/')
 def index():
-    return "<h1>Welcome to my document classifier!</h1>"
-
-@app.route('/how-to')
-def howto():
-    return "How to use this page:"
+    return """
+    <h1>Welcome to my document classifier!</h1>
+    Submit a request to '/predict' with your hashed sentence in as the 'words' parameter.
+    """
 
 if __name__ == '__main__':
     app.run(debug=True)
