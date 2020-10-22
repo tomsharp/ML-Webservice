@@ -5,11 +5,7 @@ from flask_restful import Resource, Api, reqparse
 import bz2
 import _pickle as cPickle
 from config import vect_path, model_path
-
-def decompress_pickle(path):
-    data = bz2.BZ2File(path, 'rb')
-    data = cPickle.load(data)
-    return data
+from util import decompress_pickle
 
 app = Flask(__name__)
 api = Api(app)
