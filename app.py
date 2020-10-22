@@ -44,5 +44,9 @@ api.add_resource(Predictor, '/predict')
 def index():
     return "<h1>Welcome to my document classifier!</h1>"
 
+@app.route('/how-to')
+def howto():
+    return "How to use this page:"
+
 if __name__ == '__main__':
     app.run(debug=True)
