@@ -1,3 +1,7 @@
+import bz2
+import pickle
+import _pickle as cPickle
+
 # helper functions
 def compressed_pickle(path, data):
     with bz2.BZ2File(path, 'w') as f: 

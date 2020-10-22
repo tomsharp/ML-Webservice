@@ -2,8 +2,6 @@ import pickle
 
 from flask import Flask 
 from flask_restful import Resource, Api, reqparse
-import bz2
-import _pickle as cPickle
 from config import vect_path, model_path
 from util import decompress_pickle
 
@@ -41,6 +39,8 @@ def index():
     return """
     <h1>Welcome to my document classifier!</h1>
     Submit a request to '/predict' with your hashed sentence in as the 'words' parameter.
+    <br>
+    For more information, please visit this project's <a href="https://github.com/tomsharp/ML-Webservice">GitHub</a>
     """
 
 if __name__ == '__main__':

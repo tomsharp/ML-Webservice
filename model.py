@@ -1,9 +1,6 @@
 import json
 import pandas as pd 
 import numpy as np
-import bz2
-import pickle
-import _pickle as cPickle
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
