@@ -40,5 +40,9 @@ class Predictor(Resource):
 
 api.add_resource(Predictor, '/')
 
+@app.route('/')
+def index():
+    return "<h1>Welcome to our server !!</h1>"
+
 if __name__ == '__main__':
     app.run(debug=False, port=5000)
