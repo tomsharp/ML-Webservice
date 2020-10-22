@@ -2,16 +2,20 @@ import pickle
 
 from flask import Flask 
 from flask_restful import Resource, Api, reqparse
+import bz2
+import _pickle as cPickle
+from config import vect_path, model_path
+
+def decompress_pickle(path):
+    data = bz2.BZ2File(path, 'rb')
+    data = cPickle.load(data)
+    return data
 
 app = Flask(__name__)
 api = Api(app)
 
-vect_path = 'modeling/vectorizer.pkl'
-model_path = 'modeling/model.pkl'
-with open(vect_path, 'rb') as f:
-    vectorizer = pickle.load(f)
-with open(model_path, 'rb') as f:
-    model = pickle.load(f)
+vectorizer = decompress_pickle(vect_path)
+model = decompress_pickle(model_path)
 
 parser = reqparse.RequestParser()
 parser.add_argument('words')

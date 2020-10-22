@@ -1,0 +1,2 @@
+,f1_micro,model,vectorizer,params
+0,0.7750906630256411,MultinomialNB,<class 'sklearn.feature_extraction.text.CountVectorizer'>,"{'alpha': 0.2222222222222222, 'fit_prior': True}"
